@@ -1,0 +1,11 @@
+1. Check version of .NET Core SKD & .NET Core Runtime
+Runtimes: (dir (Get-Command dotnet).Path.Replace('dotnet.exe', 'shared\Microsoft.NETCore.App')).Name
+SDK's: (dir (Get-Command dotnet).Path.Replace('dotnet.exe', 'sdk')).Name
+
+2. Create a new project
+    - Assume that I created a folder structure as: TinyShoppingCartOnContainers\src\WebApps\AdminWebSPA
+    - Now I want to create a MVC project into the folder above.
+    - Command: 
+        + cd to "TinyShoppingCartOnContainers\src\WebApps\AdminWebSPA"
+        + dotnet new mvc --name TinyShoppingCart.WebApps.AdminWebSPA --output . (Note: --name: name of project file, --output: the folder contains the project)
+    - Result: There is MVC project named TinyShoppingCart.WebApps.AdminWebSPA.csproj in the folder TinyShoppingCartOnContainers\src\WebApps\AdminWebSPA

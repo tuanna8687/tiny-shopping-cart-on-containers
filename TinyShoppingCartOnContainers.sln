@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E157B8A-5C6A-4DA8-BC25-D3537023EE60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{74BD3A4C-804C-4F52-83DB-2D6B0289CFAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyShoppingCart.WebApps.AdminWebSPA", "src\WebApps\AdminWebSPA\TinyShoppingCart.WebApps.AdminWebSPA.csproj", "{12B9D234-EA60-49A6-92C2-E7D174E7AB77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|x64.Build.0 = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Debug|x86.Build.0 = Debug|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|x64.ActiveCfg = Release|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|x64.Build.0 = Release|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|x86.ActiveCfg = Release|Any CPU
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{74BD3A4C-804C-4F52-83DB-2D6B0289CFAC} = {7E157B8A-5C6A-4DA8-BC25-D3537023EE60}
+		{12B9D234-EA60-49A6-92C2-E7D174E7AB77} = {74BD3A4C-804C-4F52-83DB-2D6B0289CFAC}
+	EndGlobalSection
+EndGlobal

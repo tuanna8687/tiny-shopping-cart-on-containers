@@ -1,0 +1,6 @@
+1. Link to learn Vue
+    - https://marczak.io/posts/netcore-vuejs/
+    - https://scotch.io/tutorials/build-a-secure-to-do-app-with-vuejs-aspnet-core-and-okta
+
+2. JS Module, Webpack
+    - https://codeburst.io/how-to-use-webpack-in-asp-net-core-projects-a-basic-react-template-sample-25a3681a5fc2
