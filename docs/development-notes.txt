@@ -2,5 +2,29 @@
     - https://marczak.io/posts/netcore-vuejs/
     - https://scotch.io/tutorials/build-a-secure-to-do-app-with-vuejs-aspnet-core-and-okta
 
-2. JS Module, Webpack
-    - https://codeburst.io/how-to-use-webpack-in-asp-net-core-projects-a-basic-react-template-sample-25a3681a5fc2
+2. JS Module
+    - JS module is very important to write a large JS application. Without JS module, we must manually manage dependencies by ordering of JS files. It's a nightmare.
+
+    - History
+        + Module patterns in ES5: a way to emulate module feature in JS using IIFE
+        + Module formats (syntax) & module loaders (execution): write JS follow module formats and use module loader to load these JS code
+            * Module formats
+                ~ CommonJS: server-first approach, load module synchronously: module.exports & require. Please note that NodeJS (server side) has a built-in loader to execute CommonJS format on server but CommonJS is also used on client side.
+                ~ AMD: client-first approach, load module asynchronous: define
+                ~ UMD: support both CommonJS & AMD 
+            * Module loaders: RequireJS, SystemJS, etc.
+        + Native JS module (ES6)
+            * Workflow: ES6 module -> Babel transpiler -> AMD/CommomJS (module format) -> Module loader
+        + Module bundler: replace module loaders. When you use module formats with module loaders then you must download module loaders along with your modules to be able to execute. But with module bundler, you don't need to use module loades to execute your modules. All your modules are bundled into packages that can execute without any loaders.
+            * Workflow: any format: AMD, CommonJS, ES6 -> bundler tool -> bundle files
+3. Webpack: a JS module bundler
+    - Core concepts:
+        + Entry
+        + Output
+        + Loaders: Out of the box, webpack only understands JavaScript files. Loaders allow webpack to process other types of files and convert them into valid modules that can be consumed by your application and added to the dependency graph.
+        + Plugins: While loaders are used to transform certain types of modules, plugins can be leveraged to perform a wider range of tasks like bundle optimization, asset management and injection of environment variables. Plugins can do things that loaders can't do
+
+
+3. Setup skeleton for front-end
+    - Follow a post (https://codeburst.io/how-to-use-webpack-in-asp-net-core-projects-a-basic-react-template-sample-25a3681a5fc2), I will setup a build process using Webpack for SPA app without any JS frameworks.
+    - After that I will add Vue framework into the skeleton above.
