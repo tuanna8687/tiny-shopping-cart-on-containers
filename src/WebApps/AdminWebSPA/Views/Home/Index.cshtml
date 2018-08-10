@@ -5,6 +5,15 @@
 <div id="vuecomponent">
     <component-a v-bind:name="'Tuan'"></component-a>
     <button-counter></button-counter>
+    <div v-bind:style="{ fontSize: postFontSize + 'em' }">
+        <blog-post 
+            v-for="post in posts"
+            v-bind:key="post.id"
+            v-bind:post="post"
+            v-on:enlarge-text="onEnlargeText" 
+        ></blog-post>
+    </div>
+    <button v-on:click="addNewPostHandler">Add New Post</button>
 </div>
 
 

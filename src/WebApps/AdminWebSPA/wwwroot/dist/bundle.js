@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./ClientApp/Components/blog-post.component.js":
+/*!*****************************************************!*\
+  !*** ./ClientApp/Components/blog-post.component.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var Vue = __webpack_require__(/*! vue/dist/vue.common */ \"./node_modules/vue/dist/vue.common.js\");\r\n\r\nVue.component('blog-post', {\r\n    props: ['post'],\r\n    template: `<div class=\"blog-post\">\r\n                    <h3>{{ post.title }}</h3>\r\n                    <button v-on:click=\"$emit('enlarge-text', 0.1)\">Enlarge text</button>\r\n                    <div v-html=\"post.content\"></div>\r\n                </div>`\r\n});\n\n//# sourceURL=webpack:///./ClientApp/Components/blog-post.component.js?");
+
+/***/ }),
+
 /***/ "./ClientApp/Components/button-counter.component.js":
 /*!**********************************************************!*\
   !*** ./ClientApp/Components/button-counter.component.js ***!
@@ -93,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var Vue = __webpack_require__(/*! vue/dist/vue.common */ \"./node_modules/vue/dist/vue.common.js\");\r\n\r\n// Register a component at global\r\nVue.component('button-counter', {\r\n    data: function() {\r\n        return {\r\n            count: 0\r\n        };\r\n    },\r\n    template: '<button v-on:click=\"count++\">You clicked me {{ count }} times</button>'\r\n});\r\n\r\nmodule.exports = Vue;\n\n//# sourceURL=webpack:///./ClientApp/Components/button-counter.component.js?");
+eval("var Vue = __webpack_require__(/*! vue/dist/vue.common */ \"./node_modules/vue/dist/vue.common.js\");\r\n\r\n// Register a component at global\r\nVue.component('button-counter', {\r\n    data: function() {\r\n        return {\r\n            count: 0\r\n        };\r\n    },\r\n    template: '<button v-on:click=\"count++\">You clicked me {{ count }} times</button>'\r\n});\n\n//# sourceURL=webpack:///./ClientApp/Components/button-counter.component.js?");
 
 /***/ }),
 
@@ -115,7 +126,7 @@ eval("// Define a new component called todo-item\r\nvar componentA = {\r\n    pr
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\r\n//var Vue = require('vue/dist/vue.common');\r\nvar Vue = __webpack_require__(/*! ./Components/button-counter.component */ \"./ClientApp/Components/button-counter.component.js\");\r\nvar componentA = __webpack_require__(/*! ./Components/component-a */ \"./ClientApp/Components/component-a.js\");\r\n\r\nnew Vue({\r\n    el: '#vuecomponent',\r\n    components: {\r\n      'component-a': componentA\r\n    }\r\n});\n\n//# sourceURL=webpack:///./ClientApp/app.js?");
+eval("\r\nvar Vue = __webpack_require__(/*! vue/dist/vue.common */ \"./node_modules/vue/dist/vue.common.js\");\r\n__webpack_require__(/*! ./Components/button-counter.component */ \"./ClientApp/Components/button-counter.component.js\");\r\nvar componentA = __webpack_require__(/*! ./Components/component-a */ \"./ClientApp/Components/component-a.js\");\r\n__webpack_require__(/*! ./Components/blog-post.component */ \"./ClientApp/Components/blog-post.component.js\");\r\n\r\nnew Vue({\r\n    el: '#vuecomponent',\r\n    data: {\r\n        posts: [\r\n            { id: 1, title: 'Hello everyone'},\r\n            { id: 2, title: 'I\\'m Vue'},\r\n            { id: 3, title: 'It\\'s so difficult'}\r\n        ],\r\n        postFontSize: 1,\r\n        latestPostId: 3\r\n    },\r\n    methods: {\r\n        onEnlargeText: function(amount) {\r\n            this.postFontSize = this.postFontSize + amount;\r\n        },\r\n        addNewPostHandler: function() {\r\n            this.latestPostId++;\r\n            this.posts.splice(1, 0, { id: this.latestPostId, title: 'Default post'});\r\n        }\r\n    },\r\n    components: {\r\n      'component-a': componentA\r\n    }\r\n});\n\n//# sourceURL=webpack:///./ClientApp/app.js?");
 
 /***/ }),
 
